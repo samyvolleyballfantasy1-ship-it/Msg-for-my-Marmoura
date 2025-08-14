@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* Header Style with Fade-in Animation */
+header {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    animation: fadeInHeader 2s ease forwards;
+    animation-delay: 0.5s;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5),
+                 0 0 20px rgba(255,192,203,0.6);
+}
+
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-box {
+    margin-top: 80px; /* space for the header */
+    padding: 20px;
+}
+
+#quote {
+    font-size: 22px;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+button {
+    font-size: 18px;
+    background: white;
+    color: #ff758c;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
